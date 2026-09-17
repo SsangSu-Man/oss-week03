@@ -41,7 +41,9 @@ sleep(10).then(() => console.log("F"));
 
 console.log("G");
 
-// prediction:
-// actual:
+// prediction: A D G C F E B
+// actual: A D G C F E B
 // why I was wrong (one line per miss):
-//
+// 예상이 맞았지만 짧은 설명을 덧붙입니다.
+// A D G: A와 G는 console.log로 즉시 실행되고, D는 await 전이므로 즉시 실행됩니다.
+// C F E B: 모두 비동기적으로 실행되며, 설정된 지연 시간에 따라 C F E B 순서로 출력됩니다.
